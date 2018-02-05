@@ -1,0 +1,43 @@
+// $navbar-dark-color:                 rgba($white, .90);;
+// $navbar-dark-hover-color:           rgba($white, .75);
+// $navbar-dark-active-color:          rgba($white, .75);
+
+// $font-family-base:                  "Montserrat", $font-family-sans-serif;
+// $headings-family-base:              "Montserrat", $font-family-sans-serif;
+
+$spacers: map-merge((
+  6: ($spacer * 4),
+  7: ($spacer * 5),
+  8: ($spacer * 6),
+  9: ($spacer * 7),
+  10: ($spacer * 9),
+  11: ($spacer * 11),
+  12: ($spacer * 13),
+), $spacers);
+
+$blue-dark: #252B33;
+$blue-light: #3A4451;
+$neon: #5DE2F9;
+$pink: #FF6EA8;
+
+$theme-colors: map-merge((
+  "dark":  $blue-dark,
+  "light": $blue-light,
+  "accent-primary": $neon,
+  "accent-secondary": $pink
+), $theme-colors);
+
+
+// navbar custom colors
+$navbar-theme-color:                #fff;
+$navbar-theme-hover-color:          theme-color("accent-primary");
+$navbar-theme-active-color:         theme-color("accent-primary");
+$navbar-theme-disabled-color:       rgba($black, .3);
+$navbar-theme-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-theme-active-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
+$navbar-theme-toggler-border-color: #fff;
+$navbar-theme-brand-background-color:   theme-color("accent-primary");
+$navbar-theme-brand-font-type:       "Chalkduster", "Lucida Console", Monaco, monospace;
+
+// $thumbnail
+$thumbnail-size:     225px;
+$thumbnail-size-xl:  250px;

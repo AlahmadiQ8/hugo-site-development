@@ -1,0 +1,1 @@
+General Webpack configuration that I use for my projects.
