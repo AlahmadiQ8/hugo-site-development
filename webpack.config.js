@@ -38,6 +38,7 @@ module.exports = createConfig([
         autoprefixer({ browsers: ['last 2 versions'] })
       ],
     }),
+    // extractText(),
     env('production', [extractText()])
   ]),
   match(['*.gif', '*.jpg', '*.jpeg', '*.png', '*.webp', '*.svg'], [

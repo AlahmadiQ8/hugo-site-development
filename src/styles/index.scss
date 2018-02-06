@@ -4,6 +4,9 @@
 .bg-theme-dark {
   background-color: theme-color("dark"); 
 }
+.bg-theme-lighter {
+  background-color: theme-color("lighter"); 
+}
 
 .navbar-border {
   position: relative;
@@ -26,13 +29,11 @@
     color: theme-color("dark");
     font-family: $navbar-theme-brand-font-type;
     background-color: $navbar-theme-brand-background-color;
-
   }
 
   .navbar-nav {
     .nav-link {
       color: $navbar-theme-color;
-
       @include hover-focus {
         color: $navbar-theme-hover-color;
       }
@@ -115,6 +116,62 @@
       text-align: left;
     }
     @include media-breakpoint-up(xl) {
+      font-size: $display4-size;
+    }
+  }
+}
+
+
+.indexsection {
+  .indexsection-h1 {
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+      font-size: $display4-size;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: $display3-size;
+    }
+  }
+  .indexsection-entry {
+    border-bottom: 1px solid $border-color;
+    margin-top: $spacer * 1.5;
+    padding-bottom: $spacer * 1.5;
+    &:first-of-type {
+      margin-top: 0;
+    }
+    &:last-of-type {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+  .indexsection-entry-title {
+    font-size: $h4-font-size;
+    @include media-breakpoint-up(lg) {
+      font-size: $h3-font-size;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: $h2-font-size;
+    }
+  }
+  .indexsection-entry-meta {
+    color: $gray-500;
+  }
+}
+.indexsection-border {
+  position: relative;
+  &:after {
+    content:""; 
+    background: theme-color("accent-primary");
+    position: absolute; 
+    bottom: 0; 
+    height: 6px; 
+    width: 10%;
+    left: calc(90% / 2);
+    @include media-breakpoint-up(lg) {
+      left: 0; 
+      width: 30%;
+      text-align: left;
       font-size: $display4-size;
     }
   }

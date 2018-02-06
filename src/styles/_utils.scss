@@ -1,55 +1,55 @@
-.bg-black {
-  background-color: #000;
-}
+// .bg-black {
+//   background-color: #000;
+// }
 
-.border {
-  border: 2px solid pink;
-}
+// .border {
+//   border: 2px solid pink;
+// }
 
-.border-none {
-  border: none;
-}
+// .border-none {
+//   border: none;
+// }
 
-.border-white {
-  border: 2px solid #fff;
-}
+// .border-white {
+//   border: 2px solid #fff;
+// }
 
-a:hover .text-decoration-none, .text-decoration-none {
-  display: inline-block !important;
-  text-decoration: none !important;
-  &:hover {
-    text-decoration: none !important;
-  }
-}
+// a:hover .text-decoration-none, .text-decoration-none {
+//   display: inline-block !important;
+//   text-decoration: none !important;
+//   &:hover {
+//     text-decoration: none !important;
+//   }
+// }
 
-.no-focus {
-  &:focus {
-    outline: none !important;
-  }
-}
+// .no-focus {
+//   &:focus {
+//     outline: none !important;
+//   }
+// }
 
-.hover-curser {
-  &:hover {
-    cursor: pointer;
-  }
-}
+// .hover-curser {
+//   &:hover {
+//     cursor: pointer;
+//   }
+// }
 
-@for $i from 1 through 9 {
-  .fade-b-#{$i} {
-    background: rgba(17, 19, 20, $i/10) !important;
-  }
-  .fade-w-#{$i} {
-    background: rgba(255, 255, 255, $i/10) !important;
-  }
-}
+// @for $i from 1 through 9 {
+//   .fade-b-#{$i} {
+//     background: rgba(17, 19, 20, $i/10) !important;
+//   }
+//   .fade-w-#{$i} {
+//     background: rgba(255, 255, 255, $i/10) !important;
+//   }
+// }
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-    @each $prop, $abbrev in (width: w, height: h) {
-      @each $size, $length in $sizes {
-        .#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
-      }
-    }
-  }
-}
+// @each $breakpoint in map-keys($grid-breakpoints) {
+//   @include media-breakpoint-up($breakpoint) {
+//     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+//     @each $prop, $abbrev in (width: w, height: h) {
+//       @each $size, $length in $sizes {
+//         .#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
+//       }
+//     }
+//   }
+// }

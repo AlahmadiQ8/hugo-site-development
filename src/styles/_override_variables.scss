@@ -1,9 +1,20 @@
-// $navbar-dark-color:                 rgba($white, .90);;
-// $navbar-dark-hover-color:           rgba($white, .75);
-// $navbar-dark-active-color:          rgba($white, .75);
-
 // $font-family-base:                  "Montserrat", $font-family-sans-serif;
 // $headings-family-base:              "Montserrat", $font-family-sans-serif;
+$blue-dark: #252B33;
+$blue-light: #3A4451;
+$blue-lighter: #F9F9FA;
+$neon: #5DE2F9;
+$pink: #FF6EA8;
+
+$theme-colors: map-merge((
+  "dark":  $blue-dark,
+  "light": $blue-light,
+  "lighter": $blue-lighter,
+  "accent-primary": $neon,
+  "accent-secondary": $pink
+), $theme-colors);
+
+$body-color: #323a45;
 
 $spacers: map-merge((
   6: ($spacer * 4),
@@ -15,18 +26,10 @@ $spacers: map-merge((
   12: ($spacer * 13),
 ), $spacers);
 
-$blue-dark: #252B33;
-$blue-light: #3A4451;
-$neon: #5DE2F9;
-$pink: #FF6EA8;
-
-$theme-colors: map-merge((
-  "dark":  $blue-dark,
-  "light": $blue-light,
-  "accent-primary": $neon,
-  "accent-secondary": $pink
-), $theme-colors);
-
+$link-color:                theme-color("accent-secondary");
+// $link-decoration:           none !default;
+$link-hover-color:          darken(theme-color("accent-secondary"), 15%);
+$link-hover-decoration:     underline !default;
 
 // navbar custom colors
 $navbar-theme-color:                #fff;
