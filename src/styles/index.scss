@@ -137,6 +137,12 @@
     border-bottom: 1px solid $border-color;
     margin-top: $spacer * 1.5;
     padding-bottom: $spacer * 1.5;
+    &:hover {
+      text-decoration: none;
+      .indexsection-entry-title {
+        text-decoration: underline;
+      }
+    }
     &:first-of-type {
       margin-top: 0;
     }
