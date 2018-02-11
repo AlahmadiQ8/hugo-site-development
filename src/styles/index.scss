@@ -4,6 +4,9 @@
 .bg-theme-dark {
   background-color: theme-color("dark"); 
 }
+.bg-theme-lightt {
+  background-color: theme-color("lightt"); 
+}
 .bg-theme-lighter {
   background-color: theme-color("lighter"); 
 }
@@ -182,4 +185,8 @@
       font-size: $display4-size;
     }
   }
+}
+
+.footer {
+  color: $text-muted;
 }
