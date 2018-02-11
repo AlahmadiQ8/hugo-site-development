@@ -27,9 +27,9 @@ $spacers: map-merge((
 ), $spacers);
 
 $link-color:                theme-color("accent-secondary");
-// $link-decoration:           none !default;
 $link-hover-color:          darken(theme-color("accent-secondary"), 15%);
 $link-hover-decoration:     underline !default;
+$link-transition:           $transition-base;
 
 // navbar custom colors
 $navbar-theme-color:                #fff;

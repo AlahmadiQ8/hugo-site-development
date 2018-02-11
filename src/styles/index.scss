@@ -34,6 +34,7 @@
   .navbar-nav {
     .nav-link {
       color: $navbar-theme-color;
+      transition: $link-transition;
       @include hover-focus {
         color: $navbar-theme-hover-color;
       }
