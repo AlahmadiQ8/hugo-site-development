@@ -1,6 +1,17 @@
 @import "./bootstrap";
 @import "./utils";
 
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  flex: 1 0 auto;
+}
+
 .bg-theme-dark {
   background-color: theme-color("dark"); 
 }
