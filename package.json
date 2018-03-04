@@ -7,6 +7,7 @@
     "clear": "rm -rf build",
     "start": "NODE_ENV=development webpack-dev-server",
     "dev:compile": "NODE_ENV=development webpack",
+    "dev:watch": "NODE_ENV=development webpack --watch",
     "build": "NODE_ENV=production webpack"
   },
   "keywords": [],
