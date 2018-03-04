@@ -1,4 +1,9 @@
 const webpack = require('webpack')
+const path = require('path')
+const autoprefixer = require('autoprefixer')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 const {
   createConfig,
   match,
@@ -18,18 +23,27 @@ const {
   entryPoint,
   env,
   setOutput,
-  sourceMaps
+  sourceMaps,
+  
+  // helpers
+  // when,
+  group,
 } = require('webpack-blocks')
 
-const path = require('path')
-const autoprefixer = require('autoprefixer')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-
+function when (condition, configSetters) {
+  if (condition) {
+    return group(configSetters)
+  } else {
+    return () => config => config
+  }
+}
 
 module.exports = createConfig([
   entryPoint('./src/js/index.js'),
-  setOutput('./build/bundle.js'),
+  setOutput({
+    filename: 'js/[name].js',
+    path: path.resolve(__dirname, 'build'),
+  }),
   babel(),
   match('*.scss', { exclude: path.resolve('node_modules') }, [
     sass(),
@@ -38,8 +52,11 @@ module.exports = createConfig([
         autoprefixer({ browsers: ['last 2 versions'] })
       ],
     }),
-    // extractText(),
-    env('production', [extractText()])
+    when(
+      process.env.npm_lifecycle_event.match(/^dev/) || process.env.NODE_ENV === 'production',
+      [extractText()]
+    ),
+    // env('production', [extractText()])
   ]),
   match(['*.gif', '*.jpg', '*.jpeg', '*.png', '*.webp', '*.svg'], [
     file()
@@ -63,13 +80,7 @@ module.exports = createConfig([
       to: path.resolve(__dirname, 'build/assets')
     }])
   ]),
-  env('development', [
-    devServer(),
-    // devServer.proxy({
-    //   '/api': { target: 'http://localhost:3000' }
-    // }),
-    sourceMaps()
-  ]),
+  when(process.env.npm_lifecycle_event === 'start', [ devServer(), sourceMaps() ]),
   env('production', [
     uglify(),
     addPlugins([
