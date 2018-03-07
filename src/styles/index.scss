@@ -167,6 +167,7 @@ body {
     }
   }
   .indexsection-entry-title {
+    color: $body-color;
     font-size: $h4-font-size;
     @include media-breakpoint-up(lg) {
       font-size: $h3-font-size;
