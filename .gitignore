@@ -3,6 +3,7 @@ build
 # Node build artifacts
 node_modules
 npm-debug.log
+yarn-error.log
 
 # Local development
 *.env

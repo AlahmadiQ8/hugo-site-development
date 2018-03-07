@@ -200,4 +200,10 @@ body {
 
 .footer {
   color: $text-muted;
+  a {
+    color: $footer-link-color;
+    @include hover {
+      color: $footer-link-hover;
+    }
+  }
 }
