@@ -1,6 +1,7 @@
 @import './bootstrap';
 @import './_override_classes';
 @import './utils';
+@import './list_group';
 @import './content';
 
 html,
@@ -13,20 +14,6 @@ body {
 }
 .main {
   flex: 1 0 auto;
-}
-
-.bg-theme-dark {
-  background-color: theme-color('dark');
-}
-.bg-theme-lightt {
-  background-color: theme-color('lightt');
-}
-.bg-theme-lighter {
-  background-color: theme-color('lighter');
-}
-
-.box-shadow-lighter {
-  box-shadow: inset 0px -58px 64px -81px darken(theme-color('lighter'), 20%);
 }
 
 .navbar-border {

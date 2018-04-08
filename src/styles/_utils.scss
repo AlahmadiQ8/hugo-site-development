@@ -30,3 +30,30 @@
 .gray-400 {
   color: $gray-400;
 }
+
+.bg-theme-dark {
+  background-color: theme-color('dark');
+}
+.bg-theme-lightt {
+  background-color: theme-color('lightt');
+}
+.bg-theme-lighter {
+  background-color: theme-color('lighter');
+}
+
+.box-shadow-lighter {
+  box-shadow: inset 0px -58px 64px -81px darken(theme-color('lighter'), 20%);
+}
+
+// extends bootstrap's sizing utilities w-25, w-50, w-75, width: 100
+// to be responsive: w-md-50, w-lg-100 etc...
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @each $prop, $abbrev in (width: w, height: h) {
+      @each $size, $length in $sizes {
+        .#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
+      }
+    }    
+  }
+}
