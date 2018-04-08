@@ -19,6 +19,11 @@
   }
 }
 
+.no-color-link {
+  color: $body-color;
+  text-decoration: underline;
+}
+
 .gray-500 {
   color: $gray-500;
 }

@@ -66,6 +66,10 @@ module.exports = createConfig([
       inject: true,
       template: './index.html',
     }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './single.html',
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',

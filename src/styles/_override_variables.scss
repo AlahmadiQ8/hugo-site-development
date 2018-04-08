@@ -28,7 +28,7 @@ $spacers: map-merge((
 
 $link-color:                theme-color("accent-secondary");
 $link-hover-color:          darken(theme-color("accent-secondary"), 15%);
-$link-hover-decoration:     underline !default;
+$link-hover-decoration:     underline;
 $link-transition:           $transition-base;
 
 // navbar custom colors
@@ -46,6 +46,13 @@ $thumbnail-size:     225px;
 $thumbnail-size-xl:  250px;
 
 // footer
+$footer-color: $gray-600;
 $footer-link-color: $gray-400;
 $footer-link-hover: $gray-400;
 
+// content
+$content-h1-padding-bottom: $spacer/2;
+$content-h1-border-bottom: 1px solid $gray-200;
+$content-h1-margin-bottom: $spacer * 2;
+$content-p-margin-bottom: $spacer * 2;
+$content-li-margin-bottom: $spacer;

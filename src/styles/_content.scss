@@ -1,0 +1,43 @@
+.content {
+  h1 {
+    font-size: $h3-font-size;
+    padding-bottom: $content-h1-padding-bottom;
+    border-bottom: $content-h1-border-bottom;
+    margin-bottom: $content-h1-margin-bottom;
+  }
+  p {
+    margin-bottom: $content-p-margin-bottom;
+    line-height: 1.7;
+  }
+  ul {
+    margin-bottom: $content-p-margin-bottom;
+  }
+  li {
+    margin-bottom: $content-li-margin-bottom;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  img {
+    padding: $thumbnail-padding;
+    background-color: $thumbnail-bg;
+    border: $thumbnail-border-width solid $thumbnail-border-color;
+    @include border-radius($thumbnail-border-radius);
+    @include box-shadow($thumbnail-box-shadow);
+    @include img-fluid;
+  }
+  figcaption {
+    font-size: $small-font-size;
+    text-align: center;
+    color: $text-muted;
+  }
+  .anchor-link {
+    padding-left: 0.375rem;
+    opacity: 0;
+  }
+  h1, h2, h3 {
+    &:hover .anchor-link {
+      opacity: 1;
+    }
+  }
+}
